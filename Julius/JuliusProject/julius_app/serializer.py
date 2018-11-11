@@ -13,7 +13,7 @@ class EconomizouSerializer(serializers.ModelSerializer):
     class Meta:
         model = ModelEconomizou
         depth = 1
-        fields = ['id','valor']
+        fields = ['id','descricao','valor']
         
 class DetalhesSerializer(serializers.ModelSerializer):
     class Meta:

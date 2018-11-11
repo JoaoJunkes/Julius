@@ -3,13 +3,14 @@ from django.db import models
 
 
 class ModelEconomizou(models.Model):
+    descricao = models.TextField(default='', max_length=250, verbose_name='descricao')
     valor = models.FloatField(max_length=20, verbose_name='valor')
 
     def __str__(self):
-        return self.valor
+        return self.descricao
 
     class Meta:
-        verbose_name = 'ModelEconomizou'
+        verbose_name = 'ModeloEconomizou'
         
         
 class ModelDetalhes(models.Model):
@@ -21,4 +22,4 @@ class ModelDetalhes(models.Model):
         return self.titulo
 
     class Meta:
-        verbose_name = 'ModelDetalhes'
+        verbose_name = 'ModeloDetalhes'

@@ -19,7 +19,7 @@ class EconomizouView(APIView):
         serializer = EconomizouSerializer(user)
         return Response(serializer.data)
     
-class ModelDetalhesListView(APIView):
+class DetalhesListView(APIView):
     serializer_class = DetalhesSerializer
 
     def get(self, request, format=None):
@@ -29,6 +29,6 @@ class ModelDetalhesListView(APIView):
 
 class DetalhesView(APIView):
     def get(self, request, pk, format=None):
-        user = ModelEconomizou.objects.get(pk=pk)
+        user = ModelDetalhes.objects.get(pk=pk)
         serializer = DetalhesSerializer(user)
         return Response(serializer.data)
